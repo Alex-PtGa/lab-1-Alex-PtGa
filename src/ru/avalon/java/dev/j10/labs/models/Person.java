@@ -1,5 +1,7 @@
 package ru.avalon.java.dev.j10.labs.models;
 
+import ru.avalon.java.dev.j10.labs.commons.Address;
+
 /**
  * Представление о человеке.
  * <p>
@@ -12,7 +14,6 @@ package ru.avalon.java.dev.j10.labs.models;
  * </ol>
  */
 public class Person {
-
     /*
      * TODO(Студент): Создайте класс Address.
      *
@@ -28,6 +29,62 @@ public class Person {
      * 4. Подумайте над тем, какие методы должны быть объявлены
      *    в классе.
      */
+    private String surname, name, patronymic, secondname;
+    private Passport passport;
+    private Address address;
+   
+/**
+ * Основной конструктор класса {@link Person}.
+ *
+ * @param surname   Фамилия человека
+ * @param name      имя человека
+ * @param patronymic   отчество человека
+ */
+   public Person(String surname, String name, String patronymic) {
+        this.surname = surname;             // 
+        this.name = name;                //
+        this.patronymic = patronymic;         //
+    }
+      public String getSurName() {  
+          return surname;    
+      }
+      
+      public void setSurName(String surname) {       
+          this.surname = surname;    
+      }
+      
+      public String getName() {        
+          return name;    
+      }
+      public void setName(String name) {      
+          this.name = name;    
+      }
+      
+      public String getPatronymic() {        
+          return patronymic;
+      }
+      public void setPatronymic(String patronymic) {
+          this.patronymic = patronymic;    }
+      
+      public String getSecondName() {      
+          return secondname;    
+      }
+      public void setSecondName(String secondname) {     
+          this.secondname = secondname;    }
+
+      public Passport getPassport() {     
+          return passport;   
+      }
+      public void setPassport(Passport passport) {     
+          this.passport = passport;    
+      }
+
+      public Address getAddress() {     
+          return address;
+      }
+      public void setAddress(Address address) {   
+          this.address=address;    
+      }
 
     /**
      * Возврвщает полное имя человека.
@@ -46,25 +103,42 @@ public class Person {
      *
      * @return имя человека в виде строки.
      */
-    public String getFullName() {
-        /*
-         * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
-         */
-        return null;
+           
+      String getfullName (String surname, String name, String patronymic, String secondname) {
+       if(secondname == null) {
+           System.out.println(name + " " + surname + " " + patronymic);
+       }
+       else if(patronymic == null) { 
+           System.out.println(name + " " + secondname.charAt(0) + ". " + surname);
+       }
+      else if(secondname == null && patronymic == null) { 
+           System.out.println(name + " " + surname);
+       }
+          /*
+           * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
+           */
+        return surname + name + patronymic + secondname;
+      }
+    
+// переопределение метода toString() для вывода в основном методе в консоль данных   
+    @Override
+    public String toString() {
+        return "Имя: " + name + "Отчество: " + patronymic + "Фамилия: " + surname;
     }
-
     /**
      * Возвращает адрес, по которому проживает человек.
      * <p>
      * Возвращаемый адрес соответствует месту постоянной
      * регистрации человека, согласно паспортным данным.
      *
+     * @param address
      * @return адрес регистрации в виде строки.
      */
-    public String getAddress() {
+    public Address getAddress(Address address) {
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return null;
+        
+        return address;
     }
 }
