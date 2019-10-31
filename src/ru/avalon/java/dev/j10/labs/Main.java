@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs;
 
+import ru.avalon.java.dev.j10.labs.commons.Address;
 import ru.avalon.java.dev.j10.labs.models.Person;
 
 public class Main {
@@ -69,7 +70,7 @@ public class Main {
          * Значение каждой переменной должно быть выведено на
          * отдельной строке.
          */
-
+        
 // вывод полного имени через строчную переменную    
     System.out.println(fullNameIv);
     System.out.println(fullNameSm);
