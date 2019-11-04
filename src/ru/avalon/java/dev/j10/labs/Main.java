@@ -1,7 +1,7 @@
 package ru.avalon.java.dev.j10.labs;
 
 import ru.avalon.java.dev.j10.labs.commons.Address;
-import ru.avalon.java.dev.j10.labs.models.Person;
+import ru.avalon.java.dev.j10.labs.models.*;
 
 public class Main {
 
@@ -12,6 +12,7 @@ public class Main {
          * FIXME(Студент): Измените определение метода так,
            чтобы он стал точкой входа в приложение.
          */
+   
        Person ivanov = new Person("Иванов ", " Иван ", "Иванович ");
        Person smith = new Person("John ", "Edvard ", " Smith ");               
  

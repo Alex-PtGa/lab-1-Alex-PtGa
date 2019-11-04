@@ -29,7 +29,12 @@ public class Person {
      * 4. Подумайте над тем, какие методы должны быть объявлены
      *    в классе.
      */
-    private String surname, name, patronymic, secondname;
+    // поменял поле Passport на String_
+    // не получилось передать переменные класса Passport в объект Person...
+    // можно в последующем их сравнить при необходимости 
+    
+    private String surname, name, patronymic; 
+    private String secondname;
     private Passport passport;
     private Address address;
    
@@ -40,11 +45,13 @@ public class Person {
  * @param name      имя человека
  * @param patronymic   отчество человека
  */
+   
    public Person(String surname, String name, String patronymic) {
-        this.surname = surname;             // 
-        this.name = name;                //
-        this.patronymic = patronymic;         //
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
     }
+    
       public String getSurName() {  
           return surname;    
       }
@@ -64,7 +71,8 @@ public class Person {
           return patronymic;
       }
       public void setPatronymic(String patronymic) {
-          this.patronymic = patronymic;    }
+          this.patronymic = patronymic;    
+      }
       
       public String getSecondName() {      
           return secondname;    

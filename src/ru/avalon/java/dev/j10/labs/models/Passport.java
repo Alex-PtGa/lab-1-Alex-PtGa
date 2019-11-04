@@ -41,29 +41,44 @@ public class Passport {
      */
    
     private int pasSer, pasNum;   // серия и номер документа
-    private Person surname, name, patronymic, secondName;
+    public String surname, name, patronymic;
+    private Person secondName;
     private Calendar dateBirth, dateExtradite;
     private String nameOrganization;
         
-    public Passport(Person name, Person surname, Person patronymic)    {
+       
+    private Passport(String surname, String name, String patronymic) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
     }
-    
-    public Passport(int pasSer, int pasNum, Person name, Person surname, Person patronymic, Person secondName, 
-                      Calendar dateBirth, Calendar dateExtradite, String nameOrganization)    {
-        this.pasSer = pasSer;
-        this.pasNum = pasNum;
-        this.name = name;
-        this.surname = surname;
-        this.patronymic = patronymic;
-        this.secondName = secondName;
-        this.dateBirth = dateBirth;
-        this.dateExtradite = dateExtradite;
-        this.nameOrganization = nameOrganization;
+     public String getName() {  
+        return name;   
     }
-        
+      public void setName(String name) {     
+          this.name = name;    }
+      
+    public String getSurName() {     
+        return surname;    
+    }
+      public void setSurName(String surname) {   
+          this.surname = surname;    
+      }
+   
+    public String getPatronymic() { 
+        return patronymic;    
+    }
+      public void setPatronymic(String patronymic) {   
+          this.patronymic=patronymic;    
+      }
+         
+    public Person getSecondName() {        
+        return secondName;    
+    }
+      public void setSecondName(Person secondName) {   
+          this.secondName=secondName;   
+      }
+   /* // не используемые поля
     public int getPasSer() {   
         return pasSer;    
     }
@@ -77,34 +92,9 @@ public class Passport {
       public void setPasNum(int pasNum) {       
          this.pasNum=pasNum;    
       }
-          
-    public Person getName() {  
-        return name;   
-    }
-      public void setName(Person name) {     
-          this.name=name;    }
-      
-    public Person getSurName() {     
-        return surname;    
-    }
-      public void setSurName(Person surname) {   
-          this.surname = surname;    
-      }
+   */       
    
-    public Person getPatronymic() { 
-        return patronymic;    
-    }
-      public void setPatronymic(Person patronymic) {   
-          this.patronymic=patronymic;    
-      }
-         
-    public Person getSecondName() {        
-        return secondName;    
-    }
-      public void setSecondName(Person secondName) {   
-          this.secondName=secondName;   
-      }
-      
+/*      
     public Calendar getDateBirth() {    
         return dateBirth;    
     }
@@ -125,4 +115,5 @@ public class Passport {
       public void setNameOrganization(String nameOrganization) {    
           this.nameOrganization = nameOrganization;   
       }
+*/
 }

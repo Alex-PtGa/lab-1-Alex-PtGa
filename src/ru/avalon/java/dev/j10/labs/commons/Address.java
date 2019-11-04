@@ -27,11 +27,8 @@ public Address(String country, String city, String street, int house, int apartm
     this.house = house;
     this.apartment = apartment;
 }
-public Address(String country, String city, String street)   {
-    this.country = country; 
-    this.city = city;
-    this.street = street;
- }
+
+// удалил лишний конструктор 
 
 public String getCountry() {     
     return country;    
