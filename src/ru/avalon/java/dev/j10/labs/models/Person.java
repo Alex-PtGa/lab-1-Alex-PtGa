@@ -51,6 +51,10 @@ public class Person {
         this.surname = surname;
         this.patronymic = patronymic;
     }
+    //-/--/-/-/-/-/-Вариант передачи параметров Passport/-/-/-/-/-/-/-/-/-/-/-/-/-/-//-/-/- 
+    public Person(Passport passport) { 
+     this.passport = passport;
+    }
     
       public String getSurName() {  
           return surname;    
