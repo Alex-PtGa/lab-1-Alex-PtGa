@@ -85,6 +85,7 @@ public class Person {
      * Если у человека есть Имя, Фамилия и Отчество, то
      * возвращет Имя, Фимилию и Отчество, разделённые пробелом.
      * <p>
+     *
      * Если у человека нет Отчества, но есть второе имя, то
      * возвращает Имя, Первую букву второго имени, и Фамилию,
      * разделённые пробелом. После Инициала второго имени
@@ -97,20 +98,24 @@ public class Person {
      * @return имя человека в виде строки.
      */
            
-      String getfullName (String surname, String name, String patronymic, String secondname) {
-       if(secondname == null) {
-           System.out.println(name + " " + surname + " " + patronymic);
+       public String getfullName () {
+      
+           if(passport.getSecondName() == null) {
+           System.out.println(passport.getName() + " " + passport.getSurName() + " " + passport.getPatronymic());
        }
-       else if(patronymic == null) { 
-           System.out.println(name + " " + secondname.charAt(0) + ". " + surname);
+       
+       else if(passport.patronymic == null) { 
+           
+           System.out.println(name + " " + passport.getSecondName().charAt(0) + ". " + passport.getSurName()); // 
        }
-      else if(secondname == null && patronymic == null) { 
-           System.out.println(name + " " + surname);
-       }
-          /*
+       
+      else if(passport.getSecondName() == null && passport.getPatronymic() == null) { 
+           System.out.println(passport.getName() + " " + passport.getSurName());
+       }     
+       /*
            * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
            */
-        return surname + name + patronymic + secondname;
+        return passport.getSurName() + passport.getName() + passport.getPatronymic() + passport.getSecondName();
       }
     
 // переопределение метода toString() для вывода в основном методе в консоль данных   

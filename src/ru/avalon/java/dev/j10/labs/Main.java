@@ -4,7 +4,6 @@ import ru.avalon.java.dev.j10.labs.commons.Address;
 import ru.avalon.java.dev.j10.labs.models.*;
 
 public class Main {
-
     
     public static void main(String[] args) {
 
@@ -13,9 +12,6 @@ public class Main {
            чтобы он стал точкой входа в приложение.
          */
 
- //-/--/-/-/-/-/-Вариант передачи параметров Passport/-/-/-/-/-/-/-/-/-/-/-/-/-/-//-/-/-  
- 
-      
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *
@@ -50,8 +46,6 @@ public class Main {
          *    человека, описанного объектом, адресованным
          *    переменной 'smith'.
          */
-    String fullNameIv; // строковая переменная
-    String fullNameSm; // строковая переменная
     
     Address addressIv = new Address("Россия", " Пятигорск", " Энтузиастов", 5, 23);
     Address addressSm = new Address("USA", " Monte Caplo", " FirstAvenyu", 68, 1);
@@ -64,9 +58,19 @@ public class Main {
     smAddress = "Country: " +addressSm.getCountry() + " City: "+ addressSm.getCity() + " Street: "+ addressSm.getStreet()
                 + " House: "+ addressSm.getHouse() + " Apartment: "+ addressSm.getApartment();
         
-    fullNameIv = ivanov.getName();
+ /**   fullNameIv = ivanov.getName();
     fullNameSm = smith.getName();
+  */  
+    Passport passport = new Passport("ivan ", "ivanjv ", "retpos ", "soprt");
+    Passport passport1 = new Passport("ivan ", "ivanjv ", "retpos ", "soprt");
     
+    ivanov.setPassport(passport);
+    
+    smith.setPassport(passport);
+   
+    ivanov.getfullName();
+  
+    smith.getfullName();
     
         /*
          * TODO(Студент): Выведите в консоль значения созданных строковых переменных:
@@ -74,15 +78,7 @@ public class Main {
          * Значение каждой переменной должно быть выведено на
          * отдельной строке.
          */
-        
-// вывод полного имени через строчную переменную    
-    System.out.println(fullNameIv);
-    System.out.println(fullNameSm);
-    
-// вывод полного имени и адресса проживания через строчную переменную
-    System.out.println(fullNameIv + "проживает по адрессу: "+  ivAddress);
-    System.out.println(fullNameSm + "проживает по адрессу: "+  smAddress);
-    
+       
     // так же можно вывести другим способом, выввести сразу ссылочные переменные клаассов
     // пример вывода полного имени с адресом проживания
     System.out.println(ivanov + "проживает по адрессу: "+  addressIv);

@@ -42,16 +42,21 @@ public class Passport {
    
     private int pasSer, pasNum;   // серия и номер документа
     public String surname, name, patronymic;
-    private Person secondName;
+    private String secondName;
     private Calendar dateBirth, dateExtradite;
     private String nameOrganization;
         
-    public Passport(String name, String surname, String patronymic) {
+    public Passport(String name, String surname, String patronymic, String secondName) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
     }
-        
+     public Passport(String name, String surname, String patronymic, String secondName) {
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+    } 
+    
      public String getName() {  
         return name;   
     }
@@ -72,10 +77,10 @@ public class Passport {
           this.patronymic = patronymic;    
       }
          
-    public Person getSecondName() {        
+    public String getSecondName() {        
         return secondName;    
     }
-      public void setSecondName(Person secondName) {   
+      public void setSecondName(String secondName) {   
           this.secondName = secondName;   
       }
    /* // не используемые поля
