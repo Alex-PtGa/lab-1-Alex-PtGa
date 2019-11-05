@@ -105,8 +105,8 @@ public class Person {
        }
        
        else if(passport.patronymic == null) { 
-           
-           System.out.println(name + " " + passport.getSecondName().charAt(0) + ". " + passport.getSurName()); // 
+      // второе имя     
+           System.out.println(passport.getName() + " " + passport.getSecondName().charAt(0) + ". " + passport.getSurName()); // 
        }
        
       else if(passport.getSecondName() == null && passport.getPatronymic() == null) { 

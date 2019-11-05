@@ -62,11 +62,11 @@ public class Main {
     fullNameSm = smith.getName();
   */  
     Passport passport = new Passport("ivan ", "ivanjv ", "retpos ", "soprt");
-    Passport passport1 = new Passport("ivan ", "ivanjv ", "retpos ", "soprt");
+    Passport passport1 = new Passport("John", "Smith", "smit");
     
     ivanov.setPassport(passport);
     
-    smith.setPassport(passport);
+    smith.setPassport(passport1);
    
     ivanov.getfullName();
   

@@ -51,10 +51,10 @@ public class Passport {
         this.surname = surname;
         this.patronymic = patronymic;
     }
-     public Passport(String name, String surname, String patronymic, String secondName) {
+     public Passport(String name, String surname, String secondName) {
         this.name = name;
         this.surname = surname;
-        this.patronymic = patronymic;
+        this.secondName = secondName;
     } 
     
      public String getName() {  
