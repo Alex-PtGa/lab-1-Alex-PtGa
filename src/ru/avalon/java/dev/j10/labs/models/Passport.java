@@ -46,12 +46,12 @@ public class Passport {
     private Calendar dateBirth, dateExtradite;
     private String nameOrganization;
         
-       
-    private Passport(String surname, String name, String patronymic) {
+    public Passport(String name, String surname, String patronymic) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
     }
+        
      public String getName() {  
         return name;   
     }
@@ -69,14 +69,14 @@ public class Passport {
         return patronymic;    
     }
       public void setPatronymic(String patronymic) {   
-          this.patronymic=patronymic;    
+          this.patronymic = patronymic;    
       }
          
     public Person getSecondName() {        
         return secondName;    
     }
       public void setSecondName(Person secondName) {   
-          this.secondName=secondName;   
+          this.secondName = secondName;   
       }
    /* // не используемые поля
     public int getPasSer() {   
@@ -116,4 +116,8 @@ public class Passport {
           this.nameOrganization = nameOrganization;   
       }
 */
+       @Override
+    public String toString() {
+        return "Имя: " + name + "Отчество: " + patronymic + "Фамилия: " + surname;
+    }
 }

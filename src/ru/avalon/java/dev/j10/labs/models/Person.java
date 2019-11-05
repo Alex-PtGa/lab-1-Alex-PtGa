@@ -33,8 +33,7 @@ public class Person {
     // не получилось передать переменные класса Passport в объект Person...
     // можно в последующем их сравнить при необходимости 
     
-    private String surname, name, patronymic; 
-    private String secondname;
+    private String name;
     private Passport passport;
     private Address address;
    
@@ -45,25 +44,20 @@ public class Person {
  * @param name      имя человека
  * @param patronymic   отчество человека
  */
-   
-   public Person(String surname, String name, String patronymic) {
-        this.name = name;
-        this.surname = surname;
-        this.patronymic = patronymic;
+    
+   public Person(String name) {
+       this.name = name;
+    }
+    public Person(String name, Passport passport, Address address) {
+       this.name = name;
+       this.passport = passport;
+       this.address =address;
     }
     //-/--/-/-/-/-/-Вариант передачи параметров Passport/-/-/-/-/-/-/-/-/-/-/-/-/-/-//-/-/- 
     public Person(Passport passport) { 
      this.passport = passport;
     }
-    
-      public String getSurName() {  
-          return surname;    
-      }
-      
-      public void setSurName(String surname) {       
-          this.surname = surname;    
-      }
-      
+        
       public String getName() {        
           return name;    
       }
@@ -71,19 +65,6 @@ public class Person {
           this.name = name;    
       }
       
-      public String getPatronymic() {        
-          return patronymic;
-      }
-      public void setPatronymic(String patronymic) {
-          this.patronymic = patronymic;    
-      }
-      
-      public String getSecondName() {      
-          return secondname;    
-      }
-      public void setSecondName(String secondname) {     
-          this.secondname = secondname;    }
-
       public Passport getPassport() {     
           return passport;   
       }
@@ -133,10 +114,7 @@ public class Person {
       }
     
 // переопределение метода toString() для вывода в основном методе в консоль данных   
-    @Override
-    public String toString() {
-        return "Имя: " + name + "Отчество: " + patronymic + "Фамилия: " + surname;
-    }
+   
     /**
      * Возвращает адрес, по которому проживает человек.
      * <p>
@@ -149,8 +127,7 @@ public class Person {
     public Address getAddress(Address address) {
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
-         */
-        
+         */        
         return address;
     }
 }

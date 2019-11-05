@@ -13,17 +13,9 @@ public class Main {
            чтобы он стал точкой входа в приложение.
          */
 
-//-/--/-/-/-/-/-Вариант передачи параметров Passport/-/-/-/-/-/-/-/-/-/-/-/-/-/-//-/-/-   
-//       Passport pas;
-//       Person ivanov1 = new Person(new Passport("", "", ";knm;",));
-
-/** как то так охото, или это возможно только через наследование???   
- */
  //-/--/-/-/-/-/-Вариант передачи параметров Passport/-/-/-/-/-/-/-/-/-/-/-/-/-/-//-/-/-  
  
-       Person ivanov = new Person("Иванов ", " Иван ", "Иванович ");
-       Person smith = new Person("John ", "Edvard ", " Smith ");               
- 
+      
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *
@@ -35,7 +27,10 @@ public class Main {
          *    чтобы она адресовала объект типа 'Person'
          *    описывающий человека по имени 'John Edvard Smith'.
          */
+       Person ivanov = new Person("Иванов Иван Иванович");
        
+       Person smith = new Person("John Edvard Smith ");               
+  
        /*
          * TODO(Студент): Создайте несколько строковых переменных:
          *
@@ -55,8 +50,8 @@ public class Main {
          *    человека, описанного объектом, адресованным
          *    переменной 'smith'.
          */
-    String fullNameIv;
-    String fullNameSm;
+    String fullNameIv; // строковая переменная
+    String fullNameSm; // строковая переменная
     
     Address addressIv = new Address("Россия", " Пятигорск", " Энтузиастов", 5, 23);
     Address addressSm = new Address("USA", " Monte Caplo", " FirstAvenyu", 68, 1);
@@ -69,8 +64,8 @@ public class Main {
     smAddress = "Country: " +addressSm.getCountry() + " City: "+ addressSm.getCity() + " Street: "+ addressSm.getStreet()
                 + " House: "+ addressSm.getHouse() + " Apartment: "+ addressSm.getApartment();
         
-    fullNameIv = ivanov.getName() + ivanov.getPatronymic() + ivanov.getSurName();
-    fullNameSm = smith.getName() + smith.getPatronymic() + smith.getSurName();
+    fullNameIv = ivanov.getName();
+    fullNameSm = smith.getName();
     
     
         /*
